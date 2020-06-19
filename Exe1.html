@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded' , function(){
+        document.querySelectorAll('.color_change').forEach(function(button){
+            button.onclick = function(){
+                document.querySelector('#hello').style.color = button.dataset.color;
+            };
+        });
+    });
+    
+</script>
+</head>
+<body>
+    <h1 id="hello">Welcome to our page!</h1>
+    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" style="background-color:lightslategray;">
+        color
+     </button>
+     <div class="dropdown-menu">
+       <a class="dropdown-item  color_change" href="#"  data-color="yellow">yellow</a>
+       <a class="dropdown-item  color_change" href="#"  data-color="green">green</a>
+       <a class="dropdown-item  color_change" href="#"  data-color="blue">blue</a>
+       <a class="dropdown-item  color_change" href="#"  data-color="pink">pink</a>
+       <a class="dropdown-item  color_change" href="#"  data-color="red">red</a>
+     </div>
+</body>
+</html>
